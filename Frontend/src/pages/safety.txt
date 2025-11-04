@@ -1,0 +1,61 @@
+ <SwiperSlide><div className='h-[90vh] bg-grid2 relative overflow-clip rounded-lg'><img src={assets.food1} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]'  /></div>
+        </SwiperSlide>
+        <SwiperSlide><div className='h-[90vh] bg-grid1 relative overflow-clip rounded-lg'><img src={assets.food2} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]' /></div></SwiperSlide>
+        <SwiperSlide><div className='h-[90vh] bg-grid2 relative overflow-clip rounded-lg'><img src={assets.food3} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]' /></div></SwiperSlide>
+        <SwiperSlide><div className='h-[90vh] bg-grid1 relative overflow-clip rounded-lg'><img src={assets.food4} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]' /></div></SwiperSlide>
+        <SwiperSlide><div className='h-[90vh] bg-grid1 relative overflow-clip rounded-lg'><img src={assets.food5} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]' /></div></SwiperSlide>
+        <SwiperSlide><div className='h-[90vh] bg-grid2 relative overflow-clip rounded-lg'><img src={assets.food6} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]' /></div></SwiperSlide>
+        <SwiperSlide><div className='h-[90vh] bg-grid1 relative overflow-clip rounded-lg'><img src={assets.food7} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]' /></div></SwiperSlide>
+        <SwiperSlide><div className='h-[90vh] bg-grid1 relative overflow-clip rounded-lg'><img src={assets.food8} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]' /></div></SwiperSlide>
+        <SwiperSlide><div className='h-[90vh] bg-grid1 relative overflow-clip rounded-lg'><img src={assets.food9} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]' /></div></SwiperSlide>
+        <SwiperSlide><div className='h-[90vh] bg-grid1 relative overflow-clip rounded-lg'><img src={assets.food10} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]' /></div></SwiperSlide>
+        <SwiperSlide><div className='h-[90vh] bg-grid1 relative overflow-clip rounded-lg'><img src={assets.food12} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]' /></div></SwiperSlide>
+        <SwiperSlide><div className='h-[90vh] bg-grid2 relative overflow-clip rounded-lg'><img src={assets.food13} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]' /></div></SwiperSlide>
+        <SwiperSlide><div className='h-[90vh] bg-grid2 relative overflow-clip rounded-lg'><img src={assets.food14} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]' /></div></SwiperSlide>
+        <SwiperSlide><div className='h-[90vh] bg-grid1 relative overflow-clip rounded-lg'><img src={assets.food15} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]' /></div></SwiperSlide>
+
+        First try:
+        <div className='flex flex-nowrap overflow-x-auto h-[90vh] gap-5 bg-primary pl-24 touch-pan-x'>
+            <div className=' min-w-[400px] rounded-lg bg-grid2 relative overflow-clip cursor-pointer' >
+                <img src={assets.food1} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]'/>
+            </div >
+            <div className=' min-w-[400px] rounded-lg bg-grid1 relative overflow-clip cursor-pointer'>
+            <img src={assets.food2} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]'/>
+            </div>
+            <div className=' min-w-[400px] rounded-lg bg-grid2 relative overflow-clip cursor-pointer'>
+            <img src={assets.food3} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]'/>
+            </div>
+            <div className=' min-w-[400px] rounded-lg bg-grid1 relative overflow-clip cursor-pointer'>
+            <img src={assets.food4} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]'/>
+            </div>
+            <div className=' min-w-[400px] rounded-lg bg-grid1 relative overflow-clip cursor-pointer'>
+            <img src={assets.food5} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]'/>
+            </div>
+            <div className=' min-w-[400px] rounded-lg bg-grid2 relative overflow-clip cursor-pointer'>
+            <img src={assets.food6} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]'/>
+            </div>
+            <div className=' min-w-[400px] rounded-lg bg-grid1 relative overflow-clip cursor-pointer'>
+            <img src={assets.food7} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]'/>
+            </div>
+            <div className=' min-w-[400px] rounded-lg bg-grid1 relative overflow-clip cursor-pointer'>
+            <img src={assets.food8} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]'/>
+            </div>
+            <div className=' min-w-[400px] rounded-lg bg-grid1 relative overflow-clip cursor-pointer'>
+            <img src={assets.food9} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]'/>
+            </div>
+            <div className=' min-w-[400px] rounded-lg bg-grid1 relative overflow-clip cursor-pointer'>
+            <img src={assets.food10} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]'/>
+            </div>
+            <div className=' min-w-[400px] rounded-lg bg-grid1 relative overflow-clip cursor-pointer'>
+            <img src={assets.food12} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]'/>
+            </div>
+            <div className=' min-w-[400px] rounded-lg bg-grid2 relative overflow-clip cursor-pointer'>
+            <img src={assets.food13} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]'/>
+            </div>
+            <div className=' min-w-[400px] rounded-lg bg-grid2 relative overflow-clip cursor-pointer'>
+            <img src={assets.food14} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]'/>
+            </div>
+            <div className=' min-w-[400px] rounded-lg bg-grid1 relative overflow-clip cursor-pointer'>
+            <img src={assets.food15} alt='' className='absolute top-[50%] left-[50%] -translate-y-1/2 -translate-x-1/2 scale-[2.4]'/>
+            </div>
+            </div> */
