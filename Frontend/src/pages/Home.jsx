@@ -10,7 +10,7 @@ import Thirdpage from './Thirdpage';
 import Secondpage from './secondpage';
 import Fifthpage from './Fifthpage';
 import Sixthpage from './Sixthpage';
-import SeventhPage from './seventhpage';
+import SeventhPage from './Seventhpage';
 import Eighthpage from './eighthpage';
 import Lastpage from './lastpage';
 
