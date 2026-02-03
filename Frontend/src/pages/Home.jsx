@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { createContext } from 'react';
 import Header from '../components/Header';
 export const HiddenContext = createContext('false');
-import Firstpage from './firstpage';
+import Firstpage from './Firstpage';
 import Thirdpage from './Thirdpage';
 import Secondpage from './secondpage';
 import Fifthpage from './Fifthpage';
