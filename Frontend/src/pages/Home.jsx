@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useScroll } from "framer-motion";
 import Header from "../components/Header";
 import { HiddenContext } from "../contexts/HiddenContext";
-import Firstpage from './firstpage';
+import Firstpage from './Firstpage';
 import Thirdpage from './Thirdpage';
 import Secondpage from './secondpage';
 import Fifthpage from './Fifthpage';
