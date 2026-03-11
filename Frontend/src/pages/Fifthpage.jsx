@@ -1,8 +1,7 @@
-import React from 'react'
 import { assets } from '../assets/assets'
 import { motion } from "motion/react"
-import { transform } from 'motion'
 import { useState } from 'react'
+import Container from "../components/Container";
 const Fifthpage = () => {
   const [hover1,setHover1]= useState(false);
   const [hover2,setHover2]= useState(false);
@@ -11,11 +10,17 @@ const Fifthpage = () => {
   const [hover5,setHover5]= useState(false);
   const [hover6,setHover6]= useState(false);
   return (
-    <div className='bg-primary z-20 lg:h-[200vh] md:h-[250vh] sm:h-[700vh]'>
+    <motion.section
+      className='bg-primary z-20'
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.65, ease: "easeOut" }}
+    >
     <div className='bg-thirdpage'>
     <div className='bg-primary' style={{clipPath:'circle(98% at 50% 1115px)'}}>
-    <div className='place-self-center py-24'>
-    <svg  width="1224" height="312"  fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className='fill-white' >
+    <div className='place-self-center py-16 sm:py-24'>
+    <svg  width="1224" height="312"  fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className='fill-white w-full' >
     <g>
     <path d="M53.5642 159.552C95.363 133.013 98.7096 180.342 100.383 212.379C102.173 246.706 109.753 311.182 58.0486 309.41C38.8225 309.611 19.5964 309.795 0.353516 310.012C0.671441 290.86 0.738378 271.708 0.738378 252.555C0.738378 233.403 0.637975 214.218 0.353516 195.065C17.7223 182.698 35.4759 170.85 53.5642 159.552ZM53.9658 231.532C53.1124 205.962 51.2383 203.572 47.4734 205.26C46.7204 205.594 46.1013 205.878 45.3483 206.413C45.3818 215.939 45.683 225.899 45.9842 236.061C46.2854 246.222 46.5364 254.461 46.8878 261.547C47.6575 261.38 48.4439 261.229 49.2136 261.062C53.2295 260.226 54.8024 256.516 53.9658 231.548V231.532Z" fill="#FFF6F6"></path>
     <path d="M186.422 217.225C207.455 218.613 211.12 246.572 212.241 262.315C213.094 274.214 215.219 296.608 216.608 308.09C200.795 308.207 192.897 308.257 177.085 308.374C170.291 308.424 167.882 303.21 166.777 289.255C165.84 277.456 167.714 252.689 157.926 244.182C157.608 244.232 157.457 244.249 157.139 244.299C158.562 265.724 160.034 287.133 162.326 308.491C146.096 308.624 129.865 308.758 113.634 308.909C112.529 278.944 111.291 248.945 109.869 219.014C108.446 189.166 106.94 159.268 105.066 129.403C125.146 118.39 145.594 108.045 166.359 98.385C200.21 78.2134 205.313 124.774 206.987 145.831C208.693 167.239 211.421 204.374 186.305 215.22C186.355 216.022 186.372 216.423 186.405 217.242L186.422 217.225ZM161.657 175.746C160.754 158.432 158.98 154.872 155.081 156.276C154.429 156.51 152.437 157.028 152.103 157.63C148.84 163.629 153.609 186.726 154.479 200.981C155.516 200.714 156.57 200.446 157.742 200.146C161.674 199.143 162.544 193.076 161.64 175.763L161.657 175.746Z" fill="#FFF6F6"></path>
@@ -34,8 +39,9 @@ const Fifthpage = () => {
 </div>
 </div>
 </div>
-    <div className='grid grid-cols-Fifthpage grid-auto-rows-[300px] mx-36 bg-primary gap-6 '>
-        <div className='bg-grid1 relative rounded-lg font-black text-[92px] leading-none text-center text-primary tracking-tighter  h-[420px] overflow-hidden ' onMouseEnter={() => setHover1(true)} onMouseLeave={()=> setHover1(false)}> {/*Arrow function is very imp here because if we assign setHover1 dirrectly to the evenhandler, JS thinks that it is supposed to run setHover1 function first and then assign its result to the event handler. And after state is changed rerender occurs again and again which causes a loop*/ }
+    <Container>
+    <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 bg-primary pb-8'>
+        <div className='bg-grid1 relative rounded-lg font-black text-[clamp(2.25rem,6vw,5.5rem)] leading-none text-center text-primary tracking-tighter min-h-[360px] sm:min-h-[420px] overflow-hidden ' onMouseEnter={() => setHover1(true)} onMouseLeave={()=> setHover1(false)}>
           <div className='grid grid-cols-grid1 '>
           <motion.div 
             initial = {{x: 0}}
@@ -62,17 +68,17 @@ const Fifthpage = () => {
             initial = {{x: 0}}
             animate = {{x:hover1? "-100%" : 0}}
             transition={{duration : hover1? 0.8: 0, ease: 'linear', repeat:Infinity}}
-            className='absolute top-48 '
+            className='absolute top-1/2 -translate-y-1/2 left-4'
           >
-            <img src={assets.peice1} alt='yaya' className='w-82'/>
+            <img src={assets.peice1} alt='yaya' className='w-80 max-w-full'/>
           </motion.div>
           <motion.div 
             initial = {{x: 0}}
             animate = {{x:hover1? "-100%" : 0}}
             transition={{duration : hover1? 0.8: 0, ease: 'linear', repeat:Infinity}}
-            className='absolute top-48 left-[100%] size-full'
+            className='absolute top-1/2 -translate-y-1/2 left-[100%] size-full'
           >
-          <img src={assets.peice1} alt='yaya' className='w-82'/>
+          <img src={assets.peice1} alt='yaya' className='w-80 max-w-full'/>
           </motion.div>
 
 
@@ -81,7 +87,7 @@ const Fifthpage = () => {
 
 
       {/*2nd---------------------------------------------------------------------------------------------------------------------------------------------------*/}
-      <div className='bg-grid2 relative rounded-lg font-black text-[92px] leading-none text-center text-primary tracking-tighter  h-[420px] overflow-hidden ' onMouseEnter={() => setHover2(true)} onMouseLeave={()=> setHover2(false)}> {/*Arrow function is very imp here because if we assign setHover1 dirrectly to the evenhandler, JS thinks that it is supposed to run setHover1 function first and then assign its result to the event handler. And after state is changed rerender occurs again and again which causes a loop*/ }
+      <div className='bg-grid2 relative rounded-lg font-black text-[clamp(2.25rem,6vw,5.5rem)] leading-none text-center text-primary tracking-tighter min-h-[360px] sm:min-h-[420px] overflow-hidden ' onMouseEnter={() => setHover2(true)} onMouseLeave={()=> setHover2(false)}>
           <div className='grid grid-cols-grid1 '>
           <motion.div 
             initial = {{x: 0}}
@@ -108,23 +114,23 @@ const Fifthpage = () => {
             initial = {{x: 0}}
             animate = {{x:hover2? "-100%" : 0}}
             transition={{duration : hover2? 0.8: 0, ease: 'linear', repeat:Infinity}}
-            className='absolute top-48 '
+            className='absolute top-1/2 -translate-y-1/2 left-4'
           >
-            <img src={assets.peice2} alt='yaya' className='w-82'/>
+            <img src={assets.peice2} alt='yaya' className='w-80 max-w-full'/>
           </motion.div>
           <motion.div 
             initial = {{x: 0}}
             animate = {{x:hover2? "-100%" : 0}}
             transition={{duration : hover2? 0.8: 0, ease: 'linear', repeat:Infinity}}
-            className='absolute top-48 left-[100%] size-full'
+            className='absolute top-1/2 -translate-y-1/2 left-[100%] size-full'
           >
-          <img src={assets.peice2} alt='yaya' className='w-82'/>
+          <img src={assets.peice2} alt='yaya' className='w-80 max-w-full'/>
           </motion.div>
 
 
         </div>
         {/*3rd----------------------------------------------------------------------------------------------------------------*/}
-        <div className='bg-grid1 relative rounded-lg font-black text-[92px] leading-none text-center text-primary tracking-tighter  h-[420px] overflow-hidden ' onMouseEnter={() => setHover3(true)} onMouseLeave={()=> setHover3(false)}> {/*Arrow function is very imp here because if we assign setHover1 dirrectly to the evenhandler, JS thinks that it is supposed to run setHover1 function first and then assign its result to the event handler. And after state is changed rerender occurs again and again which causes a loop*/ }
+        <div className='bg-grid1 relative rounded-lg font-black text-[clamp(2.25rem,6vw,5.5rem)] leading-none text-center text-primary tracking-tighter min-h-[360px] sm:min-h-[420px] overflow-hidden ' onMouseEnter={() => setHover3(true)} onMouseLeave={()=> setHover3(false)}>
           <div className='grid grid-cols-grid1 '>
           <motion.div 
             initial = {{x: 0}}
@@ -151,23 +157,23 @@ const Fifthpage = () => {
             initial = {{x: 0}}
             animate = {{x:hover3? "-100%" : 0}}
             transition={{duration : hover3? 0.8: 0, ease: 'linear', repeat:Infinity}}
-            className='absolute top-48 '
+            className='absolute top-1/2 -translate-y-1/2 left-4'
           >
-            <img src={assets.peice3} alt='yaya' className='w-82'/>
+            <img src={assets.peice3} alt='yaya' className='w-80 max-w-full'/>
           </motion.div>
           <motion.div 
             initial = {{x: 0}}
             animate = {{x:hover3? "-100%" : 0}}
             transition={{duration : hover3? 0.8: 0, ease: 'linear', repeat:Infinity}}
-            className='absolute top-48 left-[100%] size-full'
+            className='absolute top-1/2 -translate-y-1/2 left-[100%] size-full'
           >
-          <img src={assets.peice3} alt='yaya' className='w-82'/>
+          <img src={assets.peice3} alt='yaya' className='w-80 max-w-full'/>
           </motion.div>
 
 
         </div>
         {/*4th--------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-        <div className='bg-grid2 relative rounded-lg font-black text-[92px] leading-none text-center text-primary tracking-tighter  h-[420px] overflow-hidden ' onMouseEnter={() => setHover4(true)} onMouseLeave={()=> setHover4(false)}> {/*Arrow function is very imp here because if we assign setHover1 dirrectly to the evenhandler, JS thinks that it is supposed to run setHover1 function first and then assign its result to the event handler. And after state is changed rerender occurs again and again which causes a loop*/ }
+        <div className='bg-grid2 relative rounded-lg font-black text-[clamp(2.25rem,6vw,5.5rem)] leading-none text-center text-primary tracking-tighter min-h-[360px] sm:min-h-[420px] overflow-hidden ' onMouseEnter={() => setHover4(true)} onMouseLeave={()=> setHover4(false)}>
           <div className='grid grid-cols-grid1 '>
           <motion.div 
             initial = {{x: 0}}
@@ -194,23 +200,23 @@ const Fifthpage = () => {
             initial = {{x: 0}}
             animate = {{x:hover4? "-100%" : 0}}
             transition={{duration : hover4? 0.8: 0, ease: 'linear', repeat:Infinity}}
-            className='absolute top-48 '
+            className='absolute top-1/2 -translate-y-1/2 left-4'
           >
-            <img src={assets.peice4} alt='yaya' className='w-82'/>
+            <img src={assets.peice4} alt='yaya' className='w-80 max-w-full'/>
           </motion.div>
           <motion.div 
             initial = {{x: 0}}
-            animate = {{x:hover1? "-100%" : 0}}
+            animate = {{x:hover4? "-100%" : 0}}
             transition={{duration : hover4? 0.8: 0, ease: 'linear', repeat:Infinity}}
-            className='absolute top-48 left-[100%] size-full'
+            className='absolute top-1/2 -translate-y-1/2 left-[100%] size-full'
           >
-          <img src={assets.peice4} alt='yaya' className='w-82'/>
+          <img src={assets.peice4} alt='yaya' className='w-80 max-w-full'/>
           </motion.div>
 
 
         </div>
         {/*5th--------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-        <div className='bg-grid1 relative rounded-lg font-black text-[92px] leading-none text-center text-primary tracking-tighter  h-[420px] overflow-hidden ' onMouseEnter={() => setHover5(true)} onMouseLeave={()=> setHover5(false)}> {/*Arrow function is very imp here because if we assign setHover1 dirrectly to the evenhandler, JS thinks that it is supposed to run setHover1 function first and then assign its result to the event handler. And after state is changed rerender occurs again and again which causes a loop*/ }
+        <div className='bg-grid1 relative rounded-lg font-black text-[clamp(2.25rem,6vw,5.5rem)] leading-none text-center text-primary tracking-tighter min-h-[360px] sm:min-h-[420px] overflow-hidden ' onMouseEnter={() => setHover5(true)} onMouseLeave={()=> setHover5(false)}>
           <div className='grid grid-cols-grid1 '>
           <motion.div 
             initial = {{x: 0}}
@@ -237,23 +243,23 @@ const Fifthpage = () => {
             initial = {{x: 0}}
             animate = {{x:hover5? "-100%" : 0}}
             transition={{duration : hover5? 0.8: 0, ease: 'linear', repeat:Infinity}}
-            className='absolute top-48 '
+            className='absolute top-1/2 -translate-y-1/2 left-4'
           >
-            <img src={assets.peice5} alt='yaya' className='w-82'/>
+            <img src={assets.peice5} alt='yaya' className='w-80 max-w-full'/>
           </motion.div>
           <motion.div 
             initial = {{x: 0}}
             animate = {{x:hover5? "-100%" : 0}}
             transition={{duration : hover5? 0.8: 0, ease: 'linear', repeat:Infinity}}
-            className='absolute top-48 left-[100%] size-full'
+            className='absolute top-1/2 -translate-y-1/2 left-[100%] size-full'
           >
-          <img src={assets.peice5} alt='yaya' className='w-82'/>
+          <img src={assets.peice5} alt='yaya' className='w-80 max-w-full'/>
           </motion.div>
 
 
         </div>
         {/*6th--------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-        <div className='bg-grid1 relative rounded-lg font-black text-[92px] leading-none text-center text-primary tracking-tighter  h-[420px] overflow-hidden ' onMouseEnter={() => setHover6(true)} onMouseLeave={()=> setHover6(false)}> {/*Arrow function is very imp here because if we assign setHover1 dirrectly to the evenhandler, JS thinks that it is supposed to run setHover1 function first and then assign its result to the event handler. And after state is changed rerender occurs again and again which causes a loop*/ }
+        <div className='bg-grid1 relative rounded-lg font-black text-[clamp(2.25rem,6vw,5.5rem)] leading-none text-center text-primary tracking-tighter min-h-[360px] sm:min-h-[420px] overflow-hidden ' onMouseEnter={() => setHover6(true)} onMouseLeave={()=> setHover6(false)}>
           <div className='grid grid-cols-grid1 '>
           <motion.div 
             initial = {{x: 0}}
@@ -280,33 +286,33 @@ const Fifthpage = () => {
             initial = {{x: 0}}
             animate = {{x:hover6? "-100%" : 0}}
             transition={{duration : hover6? 0.8: 0, ease: 'linear', repeat:Infinity}}
-            className='absolute top-48 '
+            className='absolute top-1/2 -translate-y-1/2 left-4'
           >
-            <img src={assets.peice6} alt='yaya' className='w-82'/>
+            <img src={assets.peice6} alt='yaya' className='w-80 max-w-full'/>
           </motion.div>
           <motion.div 
             initial = {{x: 0}}
             animate = {{x:hover6? "-100%" : 0}}
             transition={{duration : hover6? 0.8: 0, ease: 'linear', repeat:Infinity}}
-            className='absolute top-48 left-[100%] size-full'
+            className='absolute top-1/2 -translate-y-1/2 left-[100%] size-full'
           >
-          <img src={assets.peice6} alt='yaya' className='w-82'/>
+          <img src={assets.peice6} alt='yaya' className='w-80 max-w-full'/>
           </motion.div>
 
 
         </div>
         {/*--------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
     </div>
-    <div className='flex justify-center mt-12 '>
-    <button className='bg-pink-400 py-2.5 px-2 rounded font-black  overflow-hidden text-sm text-black cursor-pointer mb-12'>
-        <div className='flex whitespace-nowrap w-24 gap-2 hover:animate-loop-scroll1 '>
-        <div className='text-xl'>VIEW ALL</div>
-        <div className='text-xl' aria-hidden="true">VIEW ALL</div>
+    <div className='flex justify-center py-10'>
+      <button className='bg-pink-400 rounded font-black overflow-hidden text-black cursor-pointer px-4 py-3'>
+        <div className='flex whitespace-nowrap w-28 gap-3 hover:animate-loop-scroll1'>
+          <div className='text-base sm:text-lg'>VIEW ALL</div>
+          <div className='text-base sm:text-lg' aria-hidden="true">VIEW ALL</div>
         </div>
-        </button>
-      </div>
-    
+      </button>
     </div>
+    </Container>
+    </motion.section>
   )
 }
 

@@ -1,29 +1,90 @@
-import React from 'react';
 import { assets } from '../assets/assets';
+import Container from "../components/Container";
+import { motion } from "motion/react";
 
 const Firstpage = () => {
   return (
     <div className='relative z-40'>
       {/* Hero Section */}
-      <div className="bg-primary ">
-        <div className='relative'>
-        <div className="flex flex-col flex-wrap -space-y-16 sm:-space-y-24 md:space-y-0 md:flex-row font-black text-[130px] sm:text-[150px] md:text-[200px] w-full  text-white justify-center items-center ">
-          <h1 className="mt-4 md:mt-10 ">MEAT</h1>
-          <h1 className="hidden lg:block">-</h1>
-          <h1 className="mt-4 md:mt-10 ">FREE</h1>
-          
+      <motion.section
+        className="bg-primary pt-24 pb-12 md:pt-28 md:pb-16 relative overflow-hidden"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        <div className="pointer-events-none absolute inset-0 opacity-40">
+          <div className="absolute -top-32 -left-24 h-72 w-72 rounded-full bg-secondary blur-3xl" />
+          <div className="absolute bottom-0 -right-24 h-72 w-72 rounded-full bg-emerald-400/40 blur-3xl" />
         </div>
-        <img
-            src={assets.food}
-            alt=""
-            className="w-full  absolute top-64 md:w-[400px] md:left-[50%] md:-translate-x-[50%] md:top-[70%]"
-          />
+        <Container className="relative">
+          <div className="mb-6 flex justify-center lg:justify-start">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200 backdrop-blur">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
+              100% PLANT-BASED JOY
+            </span>
           </div>
-        <div className="flex flex-col -space-y-16 sm:-space-y-24 md:space-y-0 md:flex-row flex-wrap justify-center font-black text-[130px] mt-80 md:mt-0 sm:text-[150px] md:text-[200px]  text-white items-center relative">
-          <h1>YOUR</h1>
-          <h1 className="md:ml-2">MIND</h1>
-        </div>
-      </div>
+          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr,0.9fr]">
+            <div className="space-y-6 text-center lg:text-left">
+              <motion.h1
+                className="font-black leading-none tracking-tight text-white text-[clamp(3rem,8vw,5.5rem)]"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.15, duration: 0.6 }}
+              >
+                MEAT-FREE
+                <br />
+                YOUR MIND
+              </motion.h1>
+              <motion.p
+                className="mx-auto max-w-xl text-base sm:text-lg text-emerald-100/90"
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.55 }}
+              >
+                Bold, playful, plant-forward food that rewires what “meat-free”
+                can taste like. Big flavour, zero compromise, and plates that
+                stay curious.
+              </motion.p>
+              <motion.div
+                className="mt-4 flex flex-wrap items-center justify-center gap-4 lg:justify-start"
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
+              >
+                <button className="rounded-full bg-white px-6 py-3 text-sm font-black tracking-tight text-primary shadow-md transition hover:-translate-y-0.5 hover:shadow-lg">
+                  EXPLORE PRODUCTS
+                </button>
+                <button className="rounded-full border border-emerald-200/70 px-6 py-3 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-100/10">
+                  WHY MEAT-FREE?
+                </button>
+              </motion.div>
+            </div>
+            <motion.div
+              className="flex justify-center lg:justify-end"
+              initial={{ opacity: 0, scale: 0.9, y: 24 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ delay: 0.25, duration: 0.7, type: "spring", stiffness: 120 }}
+            >
+              <div className="relative w-[min(92vw,520px)] max-w-md">
+                <div className="absolute inset-0 rounded-[2.5rem] border border-white/10 bg-white/5 backdrop-blur-md" />
+                <img
+                  src={assets.food}
+                  alt="Hero dish"
+                  className="relative z-10 w-full rounded-[2.5rem] border border-white/15 bg-gradient-to-br from-white/10 to-white/0 p-4 object-contain"
+                />
+                <motion.div
+                  className="absolute -bottom-4 left-6 rounded-2xl bg-white/90 px-4 py-2 text-xs font-semibold text-primary shadow-lg"
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.55, duration: 0.45 }}
+                >
+                  100% PLANT PROTEIN • ZERO MEAT
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
+        </Container>
+      </motion.section>
 
       {/* Decorative SVG Section */}
       <div>
@@ -32,6 +93,8 @@ const Firstpage = () => {
           version="1.1"
           xmlnsXlink="http://www.w3.org/1999/xlink"
           viewBox="0 160 2400 500"
+          width="100%"
+          preserveAspectRatio="none"
         >
           <rect width="2400" height="300" y="160" fill="#042F1A" />
           <g
@@ -46,23 +109,35 @@ const Firstpage = () => {
         </svg>
 
         {/* Content Section */}
-        <div className="flex flex-col-reverse md:flex-row items-center bg-secondary gap-6 px-6 sm:px-12 pb-20">
-          {/* Left Side */}
-          <div className="flex flex-col text-center md:text-left">
-            <h1 className="font-black text-3xl sm:text-4xl lg:text-5xl">
-              CURIOUS...BY NAME, BY <br /> NATURE
-            </h1>
-            <p className="mt-4 text-lg sm:text-xl">
-              It's what inspires us to whip up, throw <br />
-              together, tear, shake, and break the rules <br />
-              on a mission to redefine food for a new generation.
-            </p>
-          </div>
-          {/* Right Side */}
-          <div className="flex justify-center md:justify-end">
-            <img src={assets.chef} alt="" className="w-3/4 sm:w-1/2 md:w-full" />
-          </div>
-        </div>
+        <motion.section
+          className="bg-secondary py-12 sm:py-16"
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <Container>
+            <div className="grid items-center gap-10 md:grid-cols-2">
+              <div className="text-center md:text-left">
+                <h2 className="font-black tracking-tight text-3xl sm:text-4xl lg:text-5xl">
+                  CURIOUS...BY NAME, BY NATURE
+                </h2>
+                <p className="mt-4 text-base sm:text-lg">
+                  It’s what inspires us to whip up, throw together, tear, shake,
+                  and break the rules on a mission to redefine food for a new
+                  generation.
+                </p>
+              </div>
+              <div className="flex justify-center md:justify-end">
+                <img
+                  src={assets.chef}
+                  alt=""
+                  className="w-[min(85vw,520px)]"
+                />
+              </div>
+            </div>
+          </Container>
+        </motion.section>
       </div>
     </div>
   );

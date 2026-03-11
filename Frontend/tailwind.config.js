@@ -1,14 +1,14 @@
-import Fifthpage from "./src/pages/Fifthpage";
-
 /** @type {import('tailwindcss').Config} */
+import scrollbarHide from "tailwind-scrollbar-hide";
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       gridTemplateColumns: {
-        thirdpage: "repeat(auto-fill,minmax(300px,1fr))",
-        Fifthpage: "repeat(auto-fill,minmax(300px,1fr))",
-        grid1 : "repeat(2,minmax(400px,2fr))"
+        thirdpage: "repeat(auto-fit,minmax(240px,1fr))",
+        Fifthpage: "repeat(auto-fit,minmax(240px,1fr))",
+        grid1: "repeat(2,minmax(0,1fr))",
       },
       colors: {
         primary: "#042F1A",
@@ -41,7 +41,5 @@ export default {
       },
     },
   },
-  plugins: [
-    require('tailwind-scrollbar-hide'),
-  ],
+  plugins: [scrollbarHide],
 };

@@ -1,24 +1,28 @@
-import React from 'react'
 import { assets } from '../assets/assets'
+import Container from "../components/Container";
 
 const Eighthpage = () => {
   return (
-    <div className='sticky top-0 z-10'>
-        <div className='flex flex-col items-center p-32 '>
-            <div className='text-7xl font-black text-primary tracking-tighter justify-items-center'>
-                INTRIGUED?
+    <section className='z-10 bg-white'>
+      <Container className="py-12 sm:py-16">
+        <div className='flex flex-col items-center gap-8'>
+          <div className='text-4xl sm:text-6xl lg:text-7xl font-black text-primary tracking-tight text-center'>
+            INTRIGUED?
+          </div>
+          <div className='w-full max-w-3xl'>
+            <img src={assets.home6} alt='' className='w-full' />
+            <div className="mt-6 flex justify-center">
+              <button className='btn-chat-cta rounded-full font-black text-base sm:text-xl text-black cursor-pointer px-6 py-3'>
+                <span className='flex items-center gap-3'>
+                  <span className='tracking-tight'>LET&apos;S CHAT</span>
+                  <span aria-hidden="true">💬</span>
+                </span>
+              </button>
             </div>
-            <div className='justify-items-center relative'>
-                <img src={assets.home6} alt='' className='w-2/3' />
-                <button className='bg-pink-400 p-2.5 pl-5 rounded font-black  overflow-hidden text-xl text-black cursor-pointer absolute top-[5%] left-[40%]'>
-        <div className='flex whitespace-nowrap w-28 gap-4 hover:animate-loop-scroll1 '>
-        <div className='tracking-tighter'>LET'S CHAT</div>
-        <div className='tracking-tighter' aria-hidden="true">LET'S CHAT</div>
+          </div>
         </div>
-        </button>        
-            </div>
-        </div>
-    </div>
+      </Container>
+    </section>
   )
 }
 
